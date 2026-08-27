@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tejas Anand</title>
+<meta name="description" content="Tejas Anand, research engineer at NVIDIA. Agentic post-training: closed-loop fine-tuning, cheap agent harnesses, agents testing agents.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='5.5' fill='black'/></svg>">
+<style>
+  html { font-size: 17px; }
+  body {
+    font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 5.5rem 1.4rem 4rem;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: #1a1a1a; color: #ffffff; }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #b8b8b8;
+    text-underline-offset: 3px;
+  }
+  a:hover { text-decoration-color: #1a1a1a; }
+
+  header h1 {
+    font-size: 1.55rem;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+  .subtitle { color: #6e6e6e; margin: 0.3rem 0 0; }
+  .links { margin: 1.15rem 0 0; font-size: 0.92rem; color: #6e6e6e; }
+
+  section { margin-top: 3.1rem; }
+  h2 {
+    font-size: 0.98rem;
+    font-weight: normal;
+    font-variant: small-caps;
+    letter-spacing: 0.13em;
+    color: #1a1a1a;
+    margin: 0 0 1rem;
+  }
+
+  p { margin: 0 0 1rem; }
+  p:last-child { margin-bottom: 0; }
+
+  .pub { margin-bottom: 1.6rem; }
+  .pub:last-child { margin-bottom: 0; }
+  .pub p { margin: 0; }
+  .pub .authors { color: #444444; font-size: 0.94rem; }
+  .pub .venue { color: #6e6e6e; font-size: 0.94rem; font-style: italic; }
+  .pub .desc { color: #555555; font-size: 0.93rem; margin-top: 0.2rem; }
+  .me { font-weight: 600; }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Tejas Anand</h1>
+  <p class="subtitle">research engineer &middot; nvidia</p>
+  <p class="links">
+    <!-- swap these hrefs for your real links -->
+    <a href="mailto:tejassingha@nvidia.com">email</a> &middot;
+    <a href="#">cv</a> &middot;
+    <a href="#">google scholar</a> &middot;
+    <a href="#">github</a> &middot;
+    <a href="#">x</a>
+  </p>
+</header>
+
+<section>
+  <p>
+    I work on post-training at NVIDIA. I'm broadly interested in what happens to
+    models after pretraining: fine-tuning, synthetic data, agents, and the systems
+    that tie them together.
+  </p>
+  <p>
+    I like small models, honest evals, and training runs that finish before lunch.
+  </p>
+</section>
+
+<section>
+  <h2>research</h2>
+  <p>
+    Agentic AI and post-training, broadly. Within that: data-centric fine-tuning,
+    synthetic data generation, vision-language models, efficient agent systems, and
+    the evaluation of both models and agents. The recurring theme is getting
+    frontier-level results out of small models.
+  </p>
+</section>
+
+<section>
+  <h2>selected work</h2>
+
+  <div class="pub">
+    <p class="title"><a href="https://arxiv.org/abs/2607.16345">AEVAL: From Anecdotal to Deterministic Testing for Agentic Skill Workflows</a></p>
+    <p class="venue">ICML 2026 &middot; Workshop on Statistical Frameworks for Uncertainty in Agentic Systems</p>
+    <p class="desc">
+      Skill evaluation for agents today is anecdotal: ask an agent to try the skill,
+      watch the demo, form an impression. AEVAL replaces that with a deterministic,
+      CI-integrated pipeline where every skill change runs against a declared
+      evaluation contract, with the executor structurally separated from the grader
+      so an agent cannot silently self-correct and then pass its own patched outputs.
+      Validated on real skills in a production agentic stack across multiple agent SDKs.
+    </p>
+    <p class="assets">[<a href="https://arxiv.org/abs/2607.16345">arxiv</a>] [<a href="https://icml.cc/virtual/2026/74480">icml</a>]</p>
+  </div>
+
+  <div class="pub">
+    <p class="title"><a href="https://github.com/NVIDIA-TAO/tao-skill-bank/tree/main/skills/applications/tao-run-deft-aoi">Data-Efficient Fine-Tuning</a></p>
+    <p class="venue">NVIDIA TAO skill bank, 2026</p>
+    <p class="desc">
+      A closed loop that trains a detector, scores it, runs gap analysis on the misses,
+      near misses, and false alarms, then routes each gap to the data that fixes it,
+      mined real images or synthetic defects generated onto clean parts, and retrains
+      until the gaps run dry. Applied to object detection for automated optical
+      inspection, where the loop matches full-data fine-tuning on a fraction of the
+      data and keeps improving past it.
+    </p>
+    <p class="assets">[<a href="https://github.com/NVIDIA-TAO/tao-skill-bank/tree/main/skills/applications/tao-run-deft-aoi">code</a>]</p>
+  </div>
+</section>
+
+</body>
+</html>
